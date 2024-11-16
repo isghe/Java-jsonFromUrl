@@ -5,50 +5,54 @@ from: [simplest-way-to-read-json-from-a-url-in-java](https://stackoverflow.com/a
 ## Install dependencies
 ### JSON-java
 ```shell
-$ git clone https://github.com/stleary/JSON-java.git
-$ cd JSON-java/src/main/java
-$ javac org/json/*.java
-$ jar cf json-java.jar org/json/*.class
-$ cd ../../../../
-$ ln -s -i JSON-java/src/main/java/json-java.jar json-java.jar
+₿ git clone https://github.com/stleary/JSON-java.git
+₿ cd JSON-java/src/main/java
+₿ javac org/json/*.java
+₿ jar cf json-java.jar org/json/*.class
+₿ cd ../../../../
+₿ ln -s -i JSON-java/src/main/java/json-java.jar json-java.jar
 ```
-### commons-io-2.9.0
-[IOUtils](https://downloads.apache.org//commons/io/source/commons-io-2.9.0-src.tar.gz)
+### commons-io-2.17.0
+[IOUtils](https://dlcdn.apache.org//commons/io/binaries/commons-io-2.17.0-bin.tar.gz)
 ```shell
-$ tar xvf commons-io-2.9.0-src.tar.gz
-$ ln -s -i commons-io-2.9.0/commons-io-2.9.0.jar commons-io-2.9.0.jar
+₿ tar xvf commons-io-2.17.0-bin.tar.gz
+₿ ln -s -i commons-io-2.17.0/commons-io-2.17.0.jar commons-io-2.17.0.jar
 ```
 
 # Compile
 ```shell
-$ . compile.sh
+₿ . compile.sh
 ```
 
 # Run
 ```shell
-$ . run.sh | jq
+₿ . run.sh https://jsonplaceholder.typicode.com/users/1 | jq
 ```
 ```json
 [
   {
     "fromUrl": {
-      "date": "2021-05-30T14:58:48.165Z",
-      "headers": {
-        "x-request-id": "*",
-        "x-forwarded-proto": "https",
-        "connect-time": "1",
-        "total-route-time": "0",
-        "host": "get-my-public-ip-address.herokuapp.com",
-        "x-request-start": "***",
-        "x-forwarded-port": "*",
-        "connection": "close",
-        "x-forwarded-for": "*.*.*.*",
-        "user-agent": "Java/1.8.0_261",
-        "accept": "text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2",
-        "via": "1.1 vegur"
+      "website": "hildegard.org",
+      "address": {
+        "zipcode": "92998-3874",
+        "geo": {
+          "lng": "81.1496",
+          "lat": "-37.3159"
+        },
+        "suite": "Apt. 556",
+        "city": "Gwenborough",
+        "street": "Kulas Light"
       },
-      "ip": "*.*.*.*",
-      "remoteAddress": "*"
+      "phone": "1-770-736-8031 x56442",
+      "name": "Leanne Graham",
+      "company": {
+        "bs": "harness real-time e-markets",
+        "catchPhrase": "Multi-layered client-server neural-net",
+        "name": "Romaguera-Crona"
+      },
+      "id": 1,
+      "email": "Sincere@april.biz",
+      "username": "Bret"
     },
     "index": 1
   }
